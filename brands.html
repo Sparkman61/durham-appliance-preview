@@ -15,9 +15,11 @@
   transition:transform .18s,box-shadow .18s,border-color .18s;
 }
 .brand-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(46,93,73,.3)}
+.brand-logo-wrap{height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem}
+.brand-logo{max-height:80px;max-width:140px;width:auto;height:auto;object-fit:contain;display:block}
 .brand-initial{
   width:54px;height:54px;border-radius:14px;background:var(--stone);
-  display:grid;place-items:center;margin:0 auto .9rem;
+  display:grid;place-items:center;
   font-family:'Fraunces',serif;font-weight:700;font-size:1.5rem;color:var(--pine-dark);
 }
 .brand-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--ink);margin-bottom:.3rem}
@@ -67,12 +69,12 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section class="page-hero" style="background:linear-gradient(rgba(46,93,73,0.65),rgba(46,93,73,0.65)),url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80') center/cover no-repeat">
   <div class="wrap">
-    <p class="crumb"><a href="index.html">Home</a> › Brands</p>
-    <span class="eyebrow">What we work on</span>
-    <h1>We Service All Major Brands</h1>
-    <p>From everyday workhorses to high-end appliances — if it's in your kitchen or laundry room, chances are we fix it.</p>
+    <p class="crumb"><a href="index.html" style="color:rgba(255,255,255,.7)">Home</a> <span style="color:rgba(255,255,255,.5)">›</span> <span style="color:rgba(255,255,255,.85)">Brands</span></p>
+    <span class="eyebrow" style="color:var(--brass-soft)">What we work on</span>
+    <h1 style="color:#fff">We Service All Major Brands</h1>
+    <p style="color:rgba(255,255,255,.82)">From everyday workhorses to high-end appliances — if it's in your kitchen or laundry room, chances are we fix it.</p>
   </div>
 </section>
 
@@ -85,73 +87,109 @@
     <div class="brand-grid">
 
       <div class="brand-card reveal">
-        <div class="brand-initial">S</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>S</div>'">
+        </div>
         <h3>Samsung</h3>
         <p>Refrigerators, washers, dryers &amp; ranges</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">W</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Whirlpool_logo.svg" alt="Whirlpool"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>W</div>'">
+        </div>
         <h3>Whirlpool</h3>
         <p>Full appliance lineup, all generations</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">L</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/21/LG_logo_%282015%29.svg" alt="LG"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>L</div>'">
+        </div>
         <h3>LG</h3>
         <p>Smart appliances, French-door fridges &amp; front-load washers</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">G</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg" alt="GE"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>G</div>'">
+        </div>
         <h3>GE</h3>
         <p>Standard and Profile series, all appliance types</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">K</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/thirty/KitchenAid_logo.svg" alt="KitchenAid"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>K</div>'">
+        </div>
         <h3>KitchenAid</h3>
         <p>Ranges, dishwashers, refrigerators &amp; more</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">M</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Maytag_logo.svg" alt="Maytag"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>M</div>'">
+        </div>
         <h3>Maytag</h3>
         <p>Washers, dryers, refrigerators &amp; dishwashers</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">K</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Kenmore_logo.svg" alt="Kenmore"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>K</div>'">
+        </div>
         <h3>Kenmore</h3>
         <p>All Kenmore appliances, all eras</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">F</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Frigidaire_logo.svg" alt="Frigidaire"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>F</div>'">
+        </div>
         <h3>Frigidaire</h3>
         <p>Refrigerators, ranges, washers &amp; dryers</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">E</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Electrolux_logo.svg" alt="Electrolux"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>E</div>'">
+        </div>
         <h3>Electrolux</h3>
         <p>Front-load laundry pairs &amp; refrigerators</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">B</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Bosch-logo.svg" alt="Bosch"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>B</div>'">
+        </div>
         <h3>Bosch</h3>
         <p>Dishwashers, washers &amp; refrigerators</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">A</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Amana_logo.svg" alt="Amana"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>A</div>'">
+        </div>
         <h3>Amana</h3>
         <p>Refrigerators, washers, dryers &amp; ranges</p>
       </div>
 
       <div class="brand-card reveal">
-        <div class="brand-initial">S</div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Speed_Queen_logo.svg" alt="Speed Queen"
+            onerror="this.outerHTML='<div class=\'brand-initial\'>S</div>'">
+        </div>
         <h3>Speed Queen</h3>
         <p>Commercial-grade washers &amp; dryers</p>
       </div>
@@ -162,7 +200,7 @@
       <div class="brand-note-ic">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       </div>
-      <p><strong>Don't see your brand?</strong> Call us at <a href="tel:+19192867980">919-286-7980</a> — if we can't fix it, we'll tell you straight. We also service Sub-Zero, Viking, Thermador, Amana, and many other makes not listed here.</p>
+      <p><strong>Don't see your brand?</strong> Call us at <a href="tel:+19192867980">919-286-7980</a> — if we can't fix it, we'll tell you straight. We also service Sub-Zero, Viking, Thermador, and many other makes not listed here.</p>
     </div>
   </div>
 </section>
