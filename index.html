@@ -40,7 +40,13 @@
   </div>
 </header>
 
-<section class="hero" style="background:linear-gradient(rgba(46,93,73,0.60),rgba(46,93,73,0.60)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat">
+<section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image:url('images/knobs.jpg');"></div>
+    </div>
+    <div class="hero-overlay"></div>
   <div class="wrap hero-grid">
     <div class="hero-left">
       <span class="eyebrow" style="color:var(--brass-soft)">Durham, North Carolina · Since 2011</span>
@@ -84,7 +90,12 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+    </div>
 </section>
 
 <div style="background:var(--pine);padding:1.1rem 1.5rem;text-align:center">
@@ -207,6 +218,16 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   setTimeout(function(){document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in")})},1500);
   document.querySelectorAll('.svc-card,.why-card,.rev-card,.dual-card').forEach(function(el){el.classList.add('reveal');io.observe(el)});
+
+  // Hero slider
+  var slides=document.querySelectorAll('.hero-slide');
+  var dots=document.querySelectorAll('.hero-dot');
+  var current=0,paused=false;
+  function goTo(n){slides[current].classList.remove('active');dots[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dots[current].classList.add('active');}
+  dots.forEach(function(dot){dot.addEventListener('click',function(){goTo(parseInt(dot.dataset.index));paused=true;setTimeout(function(){paused=false;},6000);});});
+  document.querySelector('.hero').addEventListener('mouseenter',function(){paused=true;});
+  document.querySelector('.hero').addEventListener('mouseleave',function(){paused=false;});
+  setInterval(function(){if(!paused)goTo(current+1);},5000);
 </script>
 </body>
 </html>
